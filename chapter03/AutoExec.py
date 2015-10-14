@@ -11,6 +11,7 @@ from scipy.interpolate import spline
 
 import statsmodels.graphics.regressionplots as rp
 from statsmodels.stats.outliers_influence import variance_inflation_factor
+import statsmodels.graphics.regressionplots as rp
 
 class AutoExec:
     def __init__(self):
@@ -57,7 +58,6 @@ class AutoExec:
         print np.cov(X, rowvar=0).shape
         cov_df = pd.DataFrame(np.corrcoef(X, rowvar=0), columns=columns, index=columns)
         print "The correlation coefficients of each column is: \n", cov_df
-
         '''
         The answer of exercise-03-09:
         (a) (b) 略
@@ -69,9 +69,18 @@ class AutoExec:
         self.res = sm.OLS(y, self.X).fit()
         print self.res.summary()
 
+    def plot_graphs(self):
+        #exog_idx = np.array(self.X.index)
+        colNum = self.X.shape[1]
+        #rp.plot_fit(self.res, exog_idx=colNum-3)
+        print "VIF of column is", variance_inflation_factor(np.array(self.X), colNum-1)
+        '''
+        rp.plot_regress_exog(self.res, exog_idx=colNum-1, fig=None)
+        rp.plot_leverage_resid2(self.res)   #squared
         # The Leverage-Studentized Residuals plot
         rp.influence_plot(self.res, criterion="DFFITS", size=20)
-        plt.show()
+        '''
+        #plt.show()
 
     def plot_predict_residual(self):
         ''' How to fit this type of data? '''
@@ -92,3 +101,4 @@ if __name__ == '__main__':
     lr.multi_variate_regression()
     #lr.plot_predict_residual()
     #lr.test()
+    lr.plot_graphs()
