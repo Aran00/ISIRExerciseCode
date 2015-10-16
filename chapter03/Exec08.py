@@ -6,6 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import statsmodels.graphics.regressionplots as rp
+import lrplot
 
 
 class Exec08:
@@ -15,9 +16,14 @@ class Exec08:
 
     def simple_regession(self):
         ''' The answer of exercise03-08:
-        (a) (i)有 (ii)|t|值很大,p值很小,相关性强 (iii)负相关 (iv)预测区间如何计算?
-        (b) 已完成
-        (c) Residual/fitted 似乎是一个二次曲线 '''
+        (a)
+            (i)  Yes, from F-stat
+            (ii) Explain it from RSE and R^2 stat
+            (iii)negative
+            (iv) Code, no prediction interval
+        (b) Code
+        (c) Residual/fitted: non-linearity
+        '''
 
         # model = smf.ols(formula="mpg ~ horsepower", data=self.df)
         y = self.df['mpg']
@@ -41,7 +47,7 @@ class Exec08:
         ax = fig.axes[0]
         ax.scatter(X['horsepower'], y, c='w')
         plt.show()
-
+        lrplot.plot_R_graphs(res)
 
 if __name__ == '__main__':
     lr = Exec08()

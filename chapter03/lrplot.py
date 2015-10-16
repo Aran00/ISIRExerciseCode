@@ -24,7 +24,7 @@ def plot_R_graphs(result):
 
     ax3 = fig.add_subplot(223)
     ax3.scatter(result.fittedvalues, np.sqrt(np.abs(infl.resid_studentized_internal)), c='w')
-    ax3.set_ylabel("sqrt(|Standardized residuals|)")
+    ax3.set_ylabel(r"$\sqrt{|Standardized \; residuals|}$")
     ax3.set_xlabel("Fitted values")
     ax3.set_title("Scale-Location")
 

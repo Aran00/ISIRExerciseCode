@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*- #
 __author__ = 'Aran'
 
@@ -110,11 +109,11 @@ if __name__ == '__main__':
     res = ex09.multi_variate_regression()
     #lrp.plot_scale_location(res)
     #lrp.plot_qq(res)
-    lrp.plot_fitted_student_residual(ex09.df, res)
+    #lrp.plot_fitted_student_residual(ex09.df, res)
 
     #ex09.get_leverages_resid(res)
     #ex09.get_vifs(ex09.X)
     #ex09.regress_with_interaction()
 
     #res = ex09.regress_with_poly_2()
-    #lrp.plot_graphs_like_R(res)
+    lrp.plot_R_graphs(res)
