@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.formula.api as smf
 import statsmodels.graphics.regressionplots as rp
-import lrplot as lrp
+from islrtools import lrplot as lrp
 
 class Exec10:
     def __init__(self):

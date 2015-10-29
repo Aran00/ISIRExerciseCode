@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 import statsmodels.graphics.regressionplots as rp
-import lrplot as lrp
+from islrtools import lrplot as lrp
 
 
 class Exec09:

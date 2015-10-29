@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import statsmodels.graphics.regressionplots as rp
-import lrplot
+from islrtools import lrplot
 
 
 class Exec08:

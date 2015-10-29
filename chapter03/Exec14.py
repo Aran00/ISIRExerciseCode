@@ -5,7 +5,7 @@ import statsmodels.formula.api as smf
 import numpy as np
 import numpy.random as npr
 import matplotlib.pyplot as plt
-import lrplot as lrp
+from islrtools import lrplot as lrp
 from pandas import DataFrame
 
 

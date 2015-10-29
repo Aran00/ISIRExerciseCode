@@ -2,11 +2,7 @@
 __author__ = 'Aran'
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import statsmodels.api as sm
 import statsmodels.formula.api as smf
-import statsmodels.graphics.regressionplots as rp
-import lrplot
 
 
 class Exec15:
