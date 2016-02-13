@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
-import statsmodels.graphics.regressionplots as rp
 from pandas import DataFrame, Series
 from islrtools import tableplot as tp
 from islrtools import calcustat as cs
@@ -94,4 +93,5 @@ class Exec10:
 if __name__ == '__main__':
     exec10 = Exec10()
     #exec10.search_pattern()
-    exec10.test_all_methods()
+    #exec10.test_all_methods()
+    exec10.logistic_regression(False)
